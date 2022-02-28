@@ -16,7 +16,11 @@ public class DrawPolygons {
         PolygonViewer view = initViewForModel(polygons);
         PolygonClicker controller = new PolygonClicker(polygons, view);
 
+        // TODO: Step 2: Create a Macro that uses an ExampleTransform,
+        //  and pass this to the animation function.
         polygons.animate();
+        // TODO: Step 3: Instead of using ExampleTransform, write a lambda
+        //  expression that does the same thing.
 
     }//main
 

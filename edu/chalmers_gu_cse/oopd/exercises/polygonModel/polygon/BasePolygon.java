@@ -41,18 +41,15 @@ class BasePolygon extends AbstractPolygon implements IPolygon {
 
     @Override
     public AbstractPolygon translate(int x, int y) {
-        // TODO: For you to implement
-        return null;
+        return new TranslatedPolygon(this, x, y);
     }
     @Override
     public AbstractPolygon rotate(double radians) {
-        // TODO: For you to implement
-        return null;
+        return new RotatedPolygon(this, radians);
     }
     @Override
     public AbstractPolygon scale(double x, double y) {
-        // TODO: For you to implement
-        return null;
+        return new ScaledPolygon(this, x, y);
     }
 
     /* Simple static helper functions */

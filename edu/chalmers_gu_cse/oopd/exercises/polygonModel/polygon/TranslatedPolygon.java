@@ -22,9 +22,10 @@ class TranslatedPolygon extends ManipulatedPolygon implements IPolygon {
     }
 
     @Override
-    public IPolygon translate(int x, int y) {
-        // TODO: Override with better behavior
-        return super.translate(x, y);
+    public AbstractPolygon translate(int x, int y) {
+        this.xMove += x;
+        this.yMove += y;
+        return this;
     }
 
     @Override

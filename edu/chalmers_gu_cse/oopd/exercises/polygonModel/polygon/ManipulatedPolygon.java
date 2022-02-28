@@ -15,21 +15,19 @@ public abstract class ManipulatedPolygon extends AbstractPolygon {
         return base.getCenterPoint();
     }
 
-    // TODO: For a challenge, how can we avoid the casts in these
-    //       three method implementations? Hint: covariance...
     @Override
-    public IPolygon translate(int x, int y) {
-        setBasePolygon( (AbstractPolygon) base.translate(x, y));
+    public AbstractPolygon translate(int x, int y) {
+        setBasePolygon( base.translate(x, y));
         return this;
     }
     @Override
-    public IPolygon rotate(double radians) {
-        setBasePolygon( (AbstractPolygon) base.rotate(radians));
+    public AbstractPolygon rotate(double radians) {
+        setBasePolygon( base.rotate(radians));
         return this;
     }
     @Override
-    public IPolygon scale(double x, double y) {
-        setBasePolygon( (AbstractPolygon) base.scale(x, y));
+    public AbstractPolygon scale(double x, double y) {
+        setBasePolygon( base.scale(x, y));
         return this;
      }
 

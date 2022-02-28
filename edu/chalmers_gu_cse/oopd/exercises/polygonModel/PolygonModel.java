@@ -33,6 +33,7 @@ public class PolygonModel extends JComponent {
     }
 
     // Delegate these methods to the animator
+    // TODO: Step 2: Parameterize the animation over a Macro
     public void animate(){
         animator.animate();
     }
