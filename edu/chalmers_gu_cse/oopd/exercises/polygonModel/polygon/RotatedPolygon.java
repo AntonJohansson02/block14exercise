@@ -5,7 +5,7 @@ import java.awt.*;
 /**
  * Created by Niklas on 2016-02-28.
  */
-class RotatedPolygon extends ManipulatedPolygon implements IPolygon {
+class RotatedPolygon extends ManipulatedPolygon implements Polygon {
     private double radians;
 
     RotatedPolygon(AbstractPolygon base, double radians) {

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by Niklas on 2016-02-29.
  */
-abstract class AbstractPolygon extends JComponent implements IPolygon {
+abstract class AbstractPolygon extends JComponent implements Polygon {
     // This violates MVC - we want this code to be part of the view2d packages!
     // We still don't have the knowledge to fix it though, so be patient.
     public void paint(Graphics g){

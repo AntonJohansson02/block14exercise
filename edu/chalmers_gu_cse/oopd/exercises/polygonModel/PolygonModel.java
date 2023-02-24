@@ -1,6 +1,6 @@
 package edu.chalmers_gu_cse.oopd.exercises.polygonModel;
 
-import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.IPolygon;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.Polygon;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,7 +23,7 @@ public class PolygonModel extends JComponent {
     }//constructor
 
     // Delegate these methods to the polygon set
-    public void addPolygon(IPolygon p){
+    public void addPolygon(Polygon p){
         polygonSet.addPolygon(p);
         animator.notifyListeners();
     }

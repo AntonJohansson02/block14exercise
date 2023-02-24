@@ -12,18 +12,18 @@ public class PolygonFactory {
     private static final int[][] triangleOffsets = { {0,-10}, {10,10}, {-10,10}};
     private static final int[][] squareOffsets = { {-10,-10}, {10,-10}, {10,10}, {-10,10}};
 
-    public static IPolygon createRectangle(int x, int y){
+    public static Polygon createRectangle(int x, int y){
         return createPolygon(x, y, rectangleOffsets);
     }
-    public static IPolygon createTriangle (int x, int y){
+    public static Polygon createTriangle (int x, int y){
         return createPolygon(x, y, triangleOffsets );
     }
-    public static IPolygon createSquare   (int x, int y){
+    public static Polygon createSquare   (int x, int y){
         return createPolygon(x, y, squareOffsets   );
     }
 
     // Private static helper methods
-    private static IPolygon createPolygon(int x, int y, int[][] offsets) {
+    private static Polygon createPolygon(int x, int y, int[][] offsets) {
         return new BasePolygon(basePoints(offsets)).translate(x,y);
     }
     private static List<Point> basePoints(int[][] offsets) {

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by Niklas on 2016-02-28.
  */
-class BasePolygon extends AbstractPolygon implements IPolygon {
+class BasePolygon extends AbstractPolygon implements Polygon {
     /*
        Invariant: the value stored for centerPoint must at all
        times be consistent with what calculateCenterPoint(points)

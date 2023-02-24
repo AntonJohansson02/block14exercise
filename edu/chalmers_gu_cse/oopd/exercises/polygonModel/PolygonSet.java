@@ -1,6 +1,6 @@
 package edu.chalmers_gu_cse.oopd.exercises.polygonModel;
 
-import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.IPolygon;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.Polygon;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,13 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /* package-private */ class PolygonSet extends JComponent {
-    private List<IPolygon> polygons = new ArrayList<>();
-    public void addPolygon(IPolygon p){
+    private List<Polygon> polygons = new ArrayList<>();
+    public void addPolygon(Polygon p){
         polygons.add(p);
     }
 
     public void paint(Graphics g){
-        for (IPolygon polygon : polygons) {
+        for (Polygon polygon : polygons) {
             polygon.paint(g);
         }
     }
@@ -26,9 +26,9 @@ import java.util.List;
         }
          */
         // Vår nya kod, som använder mutate-by-copy
-        List<IPolygon> translated = new ArrayList<>();
-        for (IPolygon p : polygons) {
-            IPolygon q = p.translate(x,y);
+        List<Polygon> translated = new ArrayList<>();
+        for (Polygon p : polygons) {
+            Polygon q = p.translate(x,y);
             translated.add(q);
         }
         this.polygons = translated;
