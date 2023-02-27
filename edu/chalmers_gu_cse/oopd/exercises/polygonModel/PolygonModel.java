@@ -32,7 +32,7 @@ public class PolygonModel implements ModelUpdateListener, Iterable<Polygon> {
     }
 
     // Delegate these methods to the animator
-    // TODO: Step 2: Parameterize the animation over a Macro
+    // TODO: Step 2a: Parameterize the animation over a Macro
     public void animate(){
         animator.animate();
     }

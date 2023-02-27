@@ -13,11 +13,11 @@ public class DrawablePolygon extends Component implements Polygon {
         this.wrappedPolygon = wrappedPolygon;
     }
 
-
-    // This violates MVC - we want this code to be part of the view2d packages!
-    // We still don't have the knowledge to fix it though, so be patient.
     public void paint(Graphics g){
-        List<Point> corners = getPoints();
+        drawLinesBetweenCorners(g, getPoints());
+    }
+
+    private void drawLinesBetweenCorners(Graphics g, List<Point> corners) {
         // first and last point should be the same
         corners.add(corners.get(0));
         Point from = null;

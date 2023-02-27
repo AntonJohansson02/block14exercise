@@ -19,11 +19,11 @@ public class DrawPolygons {
         initUIForView(view);
         PolygonClicker controller = new PolygonClicker(polygons, view);
 
-        // TODO: Step 2: Create a Macro that uses an ExampleTransform,
+        // TODO: Step 2b: Create a Macro that uses your ExampleTransform,
         //  and pass this to the animation function.
         polygons.animate();
         // TODO: Step 3: Instead of using ExampleTransform, write a lambda
-        //  expression that does the same thing.
+        //  expression here that does the same thing.
 
     }//main
     private static void initUIForView(PolygonViewer view) {

@@ -7,11 +7,12 @@ import java.util.List;
  * Created by Niklas on 2016-03-02.
  */
 public class Macro {
-    private List<Transform> transforms = new ArrayList<>();
+    private final List<Transform> transforms = new ArrayList<>();
 
-    // TODO: Step 1c: Implement this method
+    // TODO: Step 1c: Implement this method (should be trivial)
     public void addTransform(){}
 
     // TODO: Step 1d: Implement a method transform. What signature should it have?
+    // public ... transform(...){}
 
 }
