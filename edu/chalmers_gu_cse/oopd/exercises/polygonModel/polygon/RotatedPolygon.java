@@ -8,13 +8,13 @@ import java.awt.*;
 class RotatedPolygon extends ManipulatedPolygon implements Polygon {
     private double radians;
 
-    RotatedPolygon(AbstractPolygon base, double radians) {
+    RotatedPolygon(Polygon base, double radians) {
         super(base);
         this.radians = radians;
     }
 
     @Override
-    public AbstractPolygon rotate(double radians) {
+    public Polygon rotate(double radians) {
         this.radians += radians;
         return this;
     }

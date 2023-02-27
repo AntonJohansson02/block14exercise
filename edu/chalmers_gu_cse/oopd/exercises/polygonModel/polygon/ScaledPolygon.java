@@ -8,14 +8,14 @@ import java.awt.*;
 class ScaledPolygon extends ManipulatedPolygon implements Polygon {
     double xFactor, yFactor;
 
-    ScaledPolygon(AbstractPolygon base, double xFactor, double yFactor) {
+    ScaledPolygon(Polygon base, double xFactor, double yFactor) {
         super(base);
         this.xFactor = xFactor;
         this.yFactor = yFactor;
     }
 
     @Override
-    public AbstractPolygon scale(double x, double y) {
+    public Polygon scale(double x, double y) {
         this.xFactor *= x;
         this.yFactor *= y;
         return this;

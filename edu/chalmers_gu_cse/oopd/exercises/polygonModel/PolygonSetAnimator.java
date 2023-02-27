@@ -34,7 +34,7 @@ import java.util.List;
         } catch (InterruptedException e) {}
     }
 
-    private List<ModelUpdateListener> listeners = new ArrayList<>();
+    private final List<ModelUpdateListener> listeners = new ArrayList<>();
     public void addListener(ModelUpdateListener l){
         listeners.add(l);
     }

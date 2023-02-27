@@ -1,6 +1,7 @@
 package edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon;
 
 import java.awt.*;
+import java.util.List;
 
 public interface Polygon {
     Polygon translate(int x, int y);
@@ -9,7 +10,5 @@ public interface Polygon {
 
     Point getCenterPoint();
 
-    // Still an issue with MVC!!
-    void paint(Graphics g);
-
+    List<Point> getPoints();
 }
