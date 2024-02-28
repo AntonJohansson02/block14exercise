@@ -3,6 +3,9 @@ package edu.chalmers_gu_cse.oopd.exercises.polygonModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.macro.Macro;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.Polygon;
+
 /* package-private */ class PolygonSetAnimator {
     private final PolygonSet polygonSet;
     private boolean moveForwards = true;
@@ -13,10 +16,14 @@ import java.util.List;
     }
 
     // TODO: Step 2: Parameterize over a Macro
-    public void update(){
+    public void update(Macro macro) {
         ticker++;
-        int value = moveForwards ? 10 : -10;
-        polygonSet.translate(value, value);
+        for (Polygon p : polygonSet) {
+            macro.transform(p);
+        }
+        // int value = moveForwards ? 10 : -10;
+        // polygonSet.translate(value, value);
+
         notifyListeners();
         if (ticker > 10) {
             moveForwards = !moveForwards;
@@ -25,11 +32,11 @@ import java.util.List;
     }
 
     // TODO: Step 2: Parameterize over a Macro
-    public void animate(){
+    public void animate(Macro m){
         try {
             while (true) {
                 Thread.sleep(500);
-                update();
+                update(m);
             }
         } catch (InterruptedException e) {}
     }

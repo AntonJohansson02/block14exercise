@@ -1,5 +1,6 @@
 package edu.chalmers_gu_cse.oopd.exercises.polygonModel;
 
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.macro.Macro;
 import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.Polygon;
 
 import javax.swing.*;
@@ -33,8 +34,8 @@ public class PolygonModel implements ModelUpdateListener, Iterable<Polygon> {
 
     // Delegate these methods to the animator
     // TODO: Step 2a: Parameterize the animation over a Macro
-    public void animate(){
-        animator.animate();
+    public void animate(Macro m){
+        animator.animate(m);
     }
 
     @Override

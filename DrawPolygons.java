@@ -1,6 +1,10 @@
 /* This is now all we (can) use from the sub-package */
 import edu.chalmers_gu_cse.oopd.exercises.controller.PolygonClicker;
 import edu.chalmers_gu_cse.oopd.exercises.polygonModel.PolygonModel;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.macro.Macro;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.macro.RotatedTransform;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.macro.ScaledTransform;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.macro.TranslatedTransform;
 import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.PolygonFactory;
 import edu.chalmers_gu_cse.oopd.exercises.view2d.PolygonViewer;
 
@@ -16,7 +20,12 @@ public class DrawPolygons {
 
         // TODO: Step 2b: Create a Macro that uses your ExampleTransform,
         //  and pass this to the animation function.
-        polygons.animate();
+        Macro macro = new Macro();
+        macro.addTransform(new RotatedTransform());
+        macro.addTransform(new ScaledTransform());
+        macro.addTransform(new TranslatedTransform());
+
+        polygons.animate(macro);
         // TODO: Step 3: Instead of using ExampleTransform, write a lambda
         //  expression here that does the same thing.
 
